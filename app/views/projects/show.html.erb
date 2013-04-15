@@ -1,0 +1,10 @@
+<h1>show me the set!</h1>
+
+
+<%= @project.title %>
+
+<% for track in @project.tracks %>
+	<h2><%= track.title %></h2>
+<% end %>
+
+

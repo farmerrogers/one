@@ -1,0 +1,7 @@
+<h1>Sets</h1>
+
+
+<%= form_for @project, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit "Create" %>
+<% end %>
