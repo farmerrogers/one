@@ -1,7 +1,21 @@
 <h1>Sets</h1>
 
+<%= link_to "Start new Set", new_project_path, :class => "new_project" %>
 
-<%= form_for @project, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
-  <%= f.text_field :title %>
-  <%= f.submit "Create" %>
+
+<hr/>
+<% for project in @projects %>
+	<div class="projects">
+		<br/>
+		<h2><%= project.title %></h2>
+		<br/>
+		<br/>
+		<% for track in project.tracks %>
+			<%= track.title %>
+		<% end %>
+
+	</div>
 <% end %>
+
+
+

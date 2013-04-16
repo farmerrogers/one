@@ -7,8 +7,10 @@ devise_for :users
 
 root :to => "home#index"
 
-resources :tracks
-resources :projects
+
+resources :projects do
+	resources :tracks
+end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

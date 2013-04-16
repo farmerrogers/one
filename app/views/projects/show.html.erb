@@ -1,10 +1,12 @@
-<h1>show me the set!</h1>
+<h1><%= @project.title %></h1>
 
-
-<%= @project.title %>
 
 <% for track in @project.tracks %>
-	<h2><%= track.title %></h2>
+	<h2><%= link_to track.title %></h2>
 <% end %>
+
+<%= link_to "Record new Track", new_project_track_path, :class => "new_project_track" %>
+
+
 
 
