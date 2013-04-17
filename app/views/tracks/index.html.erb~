@@ -1,5 +1,0 @@
-<h1>Tracks</h1>
-
-<% for track in @tracks %>
-	<h2><%= track.title %></h2>
-<% end %>

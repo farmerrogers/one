@@ -12,6 +12,11 @@ class ProjectsController < ApplicationController
 		@project = Project.new
 		@project.title = params[:project][:title]
 		@project.save
+		redirect_to @project
+	end
+	
+	def show
+		@project = Project.find(params[:id])
 	end
 	
 	

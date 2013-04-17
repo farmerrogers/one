@@ -7,7 +7,7 @@
 <% for project in @projects %>
 	<div class="projects">
 		<br/>
-		<h2><%= project.title %></h2>
+		<h2><%= link_to project.title %></h2>
 		<br/>
 		<br/>
 		<% for track in project.tracks %>

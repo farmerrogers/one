@@ -6,6 +6,8 @@
 <% end %>
 
 
+<%= link_to "Add new Track", "/projects/#{@project.id}/tracks/new", :class => "new_project_track" %>
+
 
 
 
