@@ -14,7 +14,7 @@ class TracksController < ApplicationController
 		@track.project_id = params[:track][:project_id]
 		@track.title = params[:track][:title]
 		@track.save
-		redirect_to(project_track_path(@track.project, @track))
+		redirect_to(project_path(@track.project, @track))
 	end
 	
 	def show
