@@ -1,6 +1,6 @@
-<h1>Sets</h1>
+<h1>Projects</h1>
 
-<%= link_to "Start new Set", new_project_path, :class => "new_project" %>
+<%= link_to "Start new Project", new_project_path, :class => "new_project" %>
 
 
 <hr/>
@@ -10,8 +10,10 @@
 		<h2><%= link_to project.title %></h2>
 		<br/>
 		<br/>
+		<ul>
 		<% for track in project.tracks %>
-			<%= track.title %>
+			<li><%= track.title %></li>
+		</ul>
 		<% end %>
 
 	</div>

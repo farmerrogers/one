@@ -10,8 +10,10 @@
 		<h2><%= link_to project.title %></h2>
 		<br/>
 		<br/>
+		<ul>
 		<% for track in project.tracks %>
-			<%= track.title %>
+			<li><%= link_to track.title %></li>
+		</ul>
 		<% end %>
 
 	</div>
