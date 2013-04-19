@@ -28,6 +28,9 @@ class TracksController < ApplicationController
 	end
 	
 	def destroy
+		@track = Track.find(params[:id])
+		@track.destroy
+		redirect_to(project_path(@track.project, @track))
 	end
 
 end

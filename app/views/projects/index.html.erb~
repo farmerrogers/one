@@ -3,21 +3,17 @@
 <%= link_to "Start new Project", new_project_path, :class => "new_project" %>
 
 
-<hr/>
-<% for project in @projects %>
-	<div class="projects">
-		<br/>
-		<h2><%= link_to project.title %></h2>
-		<br/>
-		<br/>
-		<ul>
-		<% for track in project.tracks %>
-			<li><%= track.title %></li>
-		</ul>
-		<% end %>
 
-	</div>
+<hr/>
+
+<% @projects.each do |p| %>
+
+<p><%= link_to(p.title, project_path(p)) %></p>
+<h4><%= link_to 'Destroy', project_path(p),
+            :confirm => 'Are you sure?', :method => :delete %></h4>
+
 <% end %>
+
 
 
 

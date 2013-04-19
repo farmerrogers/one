@@ -1,4 +1,8 @@
-<h1>Home index</h1>
+<h1>Multi-Track Recorder</h1>
 
-<a href="<%= new_project_path %>">Create a new set!</a>
+<p>A 'multi-track recorder' is a tool that allows recordings to have several different layers, or tracks.</p>
+<p>In this app, a Project contains different Tracks.</p>
+
+
+<p><a href="<%= new_project_path %>">Create a new Project</a> to get started!</p>
 

@@ -1,20 +1,23 @@
-<h1><%= @project.title %></h1>
-
 <%= link_to "Go to All Projects", projects_path, :class => "all_projects" %>
 
 <br/>
 
-<ul>
+
+<h1><%= @project.title %></h1>
+
+
+
+
 
 <% for track in @project.tracks %>
-	<li><%= link_to track.title %></li>
+	<h3><%= link_to track.title %></h3>
+	<h4><%= link_to 'Destroy', project_track_path(@project, track),
+            :confirm => 'Are you sure?', :method => :delete %></h4>	
 <% end %>
-
-</ul>
 
 <br/>
 
-<%= link_to "Add new Track", "/projects/#{@project.id}/tracks/new", :class => "new_project_track" %>
+<%= link_to "Add new Track to #{@project.title}", "/projects/#{@project.id}/tracks/new", :class => "new_project_track" %>
 
 
 
